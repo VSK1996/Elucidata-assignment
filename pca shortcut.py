@@ -8,7 +8,7 @@ from matplotlib import*
 from sklearn.decomposition import PCA 
 
 
-inten = pd.read_csv('g.csv')
+inten = pd.read_csv('g.csv')        #here g.csv is same file as Assignment-gene_data; and m.csv is same file as Assignment-meta_data
 meta = pd.read_csv('m.csv')
 
 
