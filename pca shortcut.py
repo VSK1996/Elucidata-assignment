@@ -8,13 +8,13 @@ from matplotlib import*
 from sklearn.decomposition import PCA 
 
 
-data = pd.read_csv('gene_data-.csv')
-meta = pd.read_csv('Meta-data-sheet.csv')
+inten = pd.read_csv('g.csv')
+meta = pd.read_csv('m.csv')
 
 
-len(data)
+len(inten)
 
-dta_ch = data.iloc[:,2:]
+dta_ch = inten.iloc[:,2:]
 dta_ch=dta_ch.replace({'ssssss': '39.0', 'hhhh' : '321.43'}, regex=True)
 
 X=dta_ch.values
@@ -29,24 +29,24 @@ pca.fit(X_std)
 
 y = pca.components_
 
-z = pca.explained_variance_
-a = 0.0
-for i in range(len(z)):
-    a = a+ float(z[i])
-print (a)
+w = pca.explained_variance_
+b = 0.0
+for i in range(len(w)):
+    b = b+ float(w[i])
+print (b)
 
-xn = pca.fit_transform(X)
+Y = pca.fit_transform(X)
 
-xn.shape
+Y.shape
 
-target = np.array(meta['Time'])
+sample = np.array(meta['Time'])
 
-x_min, x_max = xn[:, 0].min() - 10000, xn[:, 0].max() + 10000
-y_min, y_max = xn[:, 1].min() - 10000, xn[:, 1].max() + 10000
+x_min, x_max = Y[:, 0].min() - 10000, Y[:, 0].max() + 10000
+y_min, y_max = Y[:, 1].min() - 10000, Y[:, 1].max() + 10000
 
 plt.figure(figsize= (15,10))
 
-plt.scatter(xn[:, 0], xn[:, 1], c=target, cmap=plt.cm.Set1,
+plt.scatter(Y[:, 0], Y[:, 1], c=sample, cmap=plt.cm.Set1,
             edgecolor='k')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
