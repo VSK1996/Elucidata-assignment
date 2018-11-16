@@ -41,19 +41,14 @@ Y.shape
 
 sample = np.array(meta['Time'])
 
-x_min, x_max = Y[:, 0].min() - 10000, Y[:, 0].max() + 10000
-y_min, y_max = Y[:, 1].min() - 10000, Y[:, 1].max() + 10000
 
-plt.figure(figsize= (15,10))
+plt.figure(figsize= (6,4))
 
 plt.scatter(Y[:, 0], Y[:, 1], c=sample, cmap=plt.cm.Set1,
             edgecolor='k')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
 
-plt.xlim(x_min, x_max)
-plt.ylim(y_min, y_max)
-plt.xticks(())
-plt.yticks(())
 
 plt.show()
+
