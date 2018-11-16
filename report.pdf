@@ -1,0 +1,13 @@
+Report for this assignmnt:
+
+PC1 and PC2 are contributing more than 30% of variance of dataset. This can be seen by how eigenvalue spread from large to small;
+so if we ignore the very very smallest one in svd ; their is no significant effect on data of genes. Basically we exclude redundunt data
+from sample.
+
+Remaining 22409 dimension are contributing remaining 60% of variance of dataset; although remaining contribution is 60% majority of this 
+is from pc3 and pc4.
+
+We visualized the dataset of containg PC1,PC2 and sample variable. So we can see that genes of similar group are closer to each other ;say  gene
+2 and gene 4 ; we can clearly see values of S1,....S30 are closed to each other so if we study only one of them we will get properties of other.
+So, we reduced our dataset like this and we study only specific genes which is one of the gene from cluster.So basically to identify bunch of 
+similar gene we study single gene only and predict the properties of other genes.
