@@ -7,7 +7,5 @@ from sample.
 Remaining 22409 dimension are contributing remaining 60% of variance of dataset; although remaining contribution is 60% majority of this 
 is from pc3 and pc4.
 
-We visualized the dataset of containg PC1,PC2 and sample variable. So we can see that genes of similar group are closer to each other ;say  gene
-2 and gene 4 ; we can clearly see values of S1,....S30 are closed to each other so if we study only one of them we will get properties of other.
-So, we reduced our dataset like this and we study only specific genes which is one of the gene from cluster.So basically to identify bunch of 
-similar gene we study single gene only and predict the properties of other genes.
+We visualized the dataset of containg PC1,PC2 and sample variable. So we can see that genes of similar group or sample or cell are closer to each other ;So if the two samples are closer to each other in pc1 and pc2 plot then we say that they have similar type of properties. so if we study only one of them we will get properties of other.
+So, we reduced our dataset like this and we distinguish datset of cells or samples like this from one another.
